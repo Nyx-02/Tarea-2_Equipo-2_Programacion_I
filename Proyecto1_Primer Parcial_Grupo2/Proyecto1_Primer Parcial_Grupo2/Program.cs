@@ -6,6 +6,17 @@ namespace VentaDeCamisas
     {
         static void Main(string[] args)
         {
+            //Comentarle al cliente el precio de la camisas
+            Console.WriteLine("Bienvenido a la tienda de camisas.");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("El precio de cada camisa es L.100.00");
+            Console.WriteLine("Se aplican descuentos según la cantidad comprada:");
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.WriteLine("- 10% de descuento si compra más de 10 camisas.");
+            Console.WriteLine("- 20% de descuento si compra más de 20 camisas.");
+            Console.WriteLine("- 40% de descuento si compra más de 30 camisas.");
+            Console.WriteLine("-----------------------------------------------------------");
+
             // Precio fijo por camisa
             const double precioCamisa = 100.0;
 
@@ -37,12 +48,17 @@ namespace VentaDeCamisas
 
             // Mostrar resultados
             Console.WriteLine("\nResumen de la compra:");
+            Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine($"Cantidad de camisas: {cantidad}");
             Console.WriteLine($"Precio unitario: L.{precioCamisa}");
+            Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine($"Total sin descuento: L.{totalSinDescuento}");
             Console.WriteLine($"Descuento aplicado: {descuento * 100}%");
+            Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine($"Monto del descuento: L.{montoDescuento}");
             Console.WriteLine($"Total a pagar: L.{totalConDescuento}");
+            Console.WriteLine("-----------------------------------------------------------");
+            Console.WriteLine("Gracias por su compra. ¡Vuelva pronto!");
 
             // Esperar que el usuario presione una tecla para salir
             Console.WriteLine("\nPresione cualquier tecla para salir...");
