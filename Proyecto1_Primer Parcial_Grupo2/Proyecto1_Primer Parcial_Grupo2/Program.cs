@@ -1,17 +1,49 @@
 ﻿using System;
 
-class Program
+namespace Estacionamiento
 {
-    static void Main()
+    class Program
     {
-        Console.WriteLine("Este es la Rama principal, el cual sera la base de datos de todos los demas ejercicios.");
-        Console.WriteLine("Este proyecto es del grupo 2 del primer parcial de Programación 1.");
-        Console.WriteLine("Integrantes del grupo:");
-        Console.WriteLine("1. Bryan Galo");
-        Console.WriteLine("2. Econ Betancourth");
-        Console.WriteLine("3. Josue Sauceda");
-        Console.WriteLine("4. Javier Ponce");
-        //no tocar esta linea, ya que es la rama principal del proyecto por lo tanto debemos de crear una rama para cada ejercicio.
-        Console.WriteLine("Para poder ver los diferentes ejercicios del proyecto por favor dirígete a las ramas del repositorio.");
+        static void Main(string[] args)
+        {
+            const int NUM_CLIENTES = 3;
+            double totalRecibos = 0;
+
+            Console.WriteLine("Cálculo de cargos por estacionamiento");
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("Horas de estacionamiento para cada cliente:");
+
+            for (int i = 1; i <= NUM_CLIENTES; i++)
+            {
+                Console.Write($"Cliente {i}: Ingrese las horas de estacionamiento: ");
+                double horas = Convert.ToDouble(Console.ReadLine());
+                double cargo = CalcularCargos(horas);
+                totalRecibos += cargo;
+
+                Console.WriteLine($"Cargo para el Cliente {i}: ${cargo:F2}");
+            }
+
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine($"Total de los recibos de ayer: ${totalRecibos:F2}");
+            Console.WriteLine("Gracias por utilizar nuestro servicio.");
+        }
+
+        static double CalcularCargos(double horas)
+        {
+            const double CUOTA_MINIMA = 2.00;
+            const double CARGO_ADICIONAL = 0.50;
+            const double CARGO_MAXIMO = 10.00;
+
+            if (horas <= 3)
+            {
+                return CUOTA_MINIMA;
+            }
+            else
+            {
+                double horasAdicionales = Math.Ceiling(horas - 3);
+                double cargo = CUOTA_MINIMA + (horasAdicionales * CARGO_ADICIONAL);
+                return Math.Min(cargo, CARGO_MAXIMO);
+            }
+        }
     }
 }
