@@ -1,17 +1,60 @@
 ﻿using System;
 
-class Program
+namespace ControlCreditoClientes
 {
-    static void Main()
+    class Program
     {
-        Console.WriteLine("Este es la Rama principal, el cual sera la base de datos de todos los demas ejercicios.");
-        Console.WriteLine("Este proyecto es del grupo 2 del primer parcial de Programación 1.");
-        Console.WriteLine("Integrantes del grupo:");
-        Console.WriteLine("1. Bryan Galo");
-        Console.WriteLine("2. Econ Betancourth");
-        Console.WriteLine("3. Josue Sauceda");
-        Console.WriteLine("4. Javier Ponce");
-        //no tocar esta linea, ya que es la rama principal del proyecto por lo tanto debemos de crear una rama para cada ejercicio.
-        Console.WriteLine("Para poder ver los diferentes ejercicios del proyecto por favor dirígete a las ramas del repositorio.");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== Control de Crédito de Clientes ===");
+
+            while (true)
+            {
+                // Solicitar número de cuenta
+                Console.Write("\nIngrese el número de cuenta (o 0 para salir): ");
+                int numeroCuenta = int.Parse(Console.ReadLine());
+
+                // Condición de salida
+                if (numeroCuenta == 0)
+                {
+                    Console.WriteLine("\nFin del programa. Gracias.");
+                    break;
+                }
+
+                // Solicitar datos del cliente
+                Console.Write("Ingrese el saldo al inicio del mes: ");
+                double saldoInicial = double.Parse(Console.ReadLine());
+
+                Console.Write("Ingrese el total de los cargos del mes: ");
+                double cargos = double.Parse(Console.ReadLine());
+
+                Console.Write("Ingrese el total de los créditos aplicados: ");
+                double creditos = double.Parse(Console.ReadLine());
+
+                Console.Write("Ingrese el límite de crédito permitido: ");
+                double limiteCredito = double.Parse(Console.ReadLine());
+
+                // Calcular nuevo saldo
+                double nuevoSaldo = saldoInicial + cargos - creditos;
+
+                // Mostrar resultados
+                Console.WriteLine($"\n--- Estado de Cuenta ---");
+                Console.WriteLine($"Número de cuenta: {numeroCuenta}");
+                Console.WriteLine($"Nuevo saldo: L.{nuevoSaldo}");
+                Console.WriteLine($"Límite de crédito: L.{limiteCredito}");
+
+                // Verificar si excede el crédito
+                if (nuevoSaldo > limiteCredito)
+                {
+                    Console.WriteLine("** Se excedió el límite de su crédito **");
+                }
+                else
+                {
+                    Console.WriteLine("Dentro del límite de crédito.");
+                }
+            }
+
+            Console.ReadKey();
+        }
     }
 }
