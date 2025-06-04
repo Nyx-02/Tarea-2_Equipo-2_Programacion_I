@@ -1,17 +1,43 @@
 ﻿using System;
 
-class Program
+namespace CalculoAumentoSalario
 {
-    static void Main()
+    class Program
     {
-        Console.WriteLine("Este es la Rama principal, el cual sera la base de datos de todos los demas ejercicios.");
-        Console.WriteLine("Este proyecto es del grupo 2 del primer parcial de Programación 1.");
-        Console.WriteLine("Integrantes del grupo:");
-        Console.WriteLine("1. Bryan Galo");
-        Console.WriteLine("2. Econ Betancourth");
-        Console.WriteLine("3. Josue Sauceda");
-        Console.WriteLine("4. Javier Ponce");
-        //no tocar esta linea, ya que es la rama principal del proyecto por lo tanto debemos de crear una rama para cada ejercicio.
-        Console.WriteLine("Para poder ver los diferentes ejercicios del proyecto por favor dirígete a las ramas del repositorio.");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Cálculo de Aumento de Salario");
+            Console.WriteLine("--------------------------------");
+            Console.Write("Ingrese su salario: ");
+            double salario = Convert.ToDouble(Console.ReadLine());
+            double aumento = CalcularAumento(salario);
+            double nuevoSalario = salario + aumento;
+            Console.WriteLine($"Aumento: ${aumento:F2}");
+            Console.WriteLine($"Nuevo salario: ${nuevoSalario:F2}");
+        }
+
+        static double CalcularAumento(double salario)
+        {
+            double aumento;
+
+            if (salario < 5000)
+            {
+                aumento = salario * 0.20;
+            }
+            else if (salario >= 5000 && salario < 10000)
+            {
+                aumento = salario * 0.10;
+            }
+            else if (salario >= 10000 && salario < 15000)
+            {
+                aumento = salario * 0.05;
+            }
+            else
+            {
+                aumento = salario * 0.03;
+            }
+
+            return aumento;
+        }
     }
 }
