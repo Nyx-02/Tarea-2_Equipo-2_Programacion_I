@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto1_Primer Parcial_Grupo2")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adab6fdb115e9d89d395ccdcab3ae7d87cbcc1be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto1_Primer Parcial_Grupo2")]

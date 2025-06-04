@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\default.LAPTOP-T08J1VQH\\source\\repos\\Tarea-2_Equipo-2_Programacion_I\\Proyecto1_Primer Parcial_Grupo2\\",
+  "WorkspaceRootPath": "C:\\Users\\default.LAPTOP-T08J1VQH\\source\\repos\\Nyx-02\\Tarea-2_Equipo-2_Programacion_I\\Proyecto1_Primer Parcial_Grupo2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D352DD02-9B58-4070-AD75-6EFCB47464BA}|Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2.csproj|c:\\users\\default.laptop-t08j1vqh\\source\\repos\\tarea-2_equipo-2_programacion_i\\proyecto1_primer parcial_grupo2\\proyecto1_primer parcial_grupo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D352DD02-9B58-4070-AD75-6EFCB47464BA}|Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2.csproj|c:\\users\\default.laptop-t08j1vqh\\source\\repos\\nyx-02\\tarea-2_equipo-2_programacion_i\\proyecto1_primer parcial_grupo2\\proyecto1_primer parcial_grupo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D352DD02-9B58-4070-AD75-6EFCB47464BA}|Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2.csproj|solutionrelative:proyecto1_primer parcial_grupo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,17 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\default.LAPTOP-T08J1VQH\\source\\repos\\Tarea-2_Equipo-2_Programacion_I\\Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\default.LAPTOP-T08J1VQH\\source\\repos\\Nyx-02\\Tarea-2_Equipo-2_Programacion_I\\Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2\\Program.cs",
               "RelativeDocumentMoniker": "Proyecto1_Primer Parcial_Grupo2\\Program.cs",
-              "ToolTip": "C:\\Users\\default.LAPTOP-T08J1VQH\\source\\repos\\Tarea-2_Equipo-2_Programacion_I\\Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2\\Program.cs",
+              "ToolTip": "C:\\Users\\default.LAPTOP-T08J1VQH\\source\\repos\\Nyx-02\\Tarea-2_Equipo-2_Programacion_I\\Proyecto1_Primer Parcial_Grupo2\\Proyecto1_Primer Parcial_Grupo2\\Program.cs",
               "RelativeToolTip": "Proyecto1_Primer Parcial_Grupo2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T17:09:45.197Z",
               "EditorCaption": ""
