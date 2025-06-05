@@ -1,17 +1,65 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+using System;
+
+class Ejercicio6
 {
     static void Main()
     {
-        Console.WriteLine("Este es la Rama principal, el cual sera la base de datos de todos los demas ejercicios.");
-        Console.WriteLine("Este proyecto es del grupo 2 del primer parcial de Programación 1.");
-        Console.WriteLine("Integrantes del grupo:");
-        Console.WriteLine("1. Bryan Galo");
-        Console.WriteLine("2. Econ Betancourth");
-        Console.WriteLine("3. Josue Sauceda");
-        Console.WriteLine("4. Javier Ponce");
-        //no tocar esta linea, ya que es la rama principal del proyecto por lo tanto debemos de crear una rama para cada ejercicio.
-        Console.WriteLine("Para poder ver los diferentes ejercicios del proyecto por favor dirígete a las ramas del repositorio.");
+        double totalVentas = 0.0;
+        int numeroProducto;
+        int cantidadVendida;
+
+        Console.WriteLine("Ingrese el número del producto (1-5) o 0 para terminar:");
+
+        while (true)
+        {
+            Console.Write("Número del producto: ");
+            numeroProducto = int.Parse(Console.ReadLine());
+
+            // Centinela para terminar el ciclo
+            if (numeroProducto == 0)
+            {
+                break;
+            }
+
+            Console.Write("Cantidad vendida: ");
+            cantidadVendida = int.Parse(Console.ReadLine());
+
+            double precioProducto;
+
+            // Determinar el precio del producto usando switch
+            switch (numeroProducto)
+            {
+                case 1:
+                    precioProducto = 2.98;
+                    break;
+                case 2:
+                    precioProducto = 4.50;
+                    break;
+                case 3:
+                    precioProducto = 9.98;
+                    break;
+                case 4:
+                    precioProducto = 4.49;
+                    break;
+                case 5:
+                    precioProducto = 6.87;
+                    break;
+                default:
+                    Console.WriteLine("Número de producto inválido. Intente de nuevo.");
+                    continue; // Volver al inicio del bucle
+            }
+
+            // Calcular el total de ventas
+            totalVentas += precioProducto * cantidadVendida;
+        }
+
+        // Mostrar el total de ventas
+        Console.WriteLine($"El valor total de venta de todos los productos vendidos es: {totalVentas:C}");
     }
 }
