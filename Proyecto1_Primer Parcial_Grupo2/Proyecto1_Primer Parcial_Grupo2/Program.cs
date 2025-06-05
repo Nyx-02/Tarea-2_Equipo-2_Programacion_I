@@ -1,17 +1,46 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+using System;
+
+class Ejercicio4
 {
     static void Main()
     {
-        Console.WriteLine("Este es la Rama principal, el cual sera la base de datos de todos los demas ejercicios.");
-        Console.WriteLine("Este proyecto es del grupo 2 del primer parcial de Programación 1.");
-        Console.WriteLine("Integrantes del grupo:");
-        Console.WriteLine("1. Bryan Galo");
-        Console.WriteLine("2. Econ Betancourth");
-        Console.WriteLine("3. Josue Sauceda");
-        Console.WriteLine("4. Javier Ponce");
-        //no tocar esta linea, ya que es la rama principal del proyecto por lo tanto debemos de crear una rama para cada ejercicio.
-        Console.WriteLine("Para poder ver los diferentes ejercicios del proyecto por favor dirígete a las ramas del repositorio.");
+        const double cuotaNormal = 1.0; // Tarifa normal
+        const double cuotaYMedia = 1.5; // Tarifa y media
+        double sueldoBruto;
+        int horasTrabajadas;
+        double tarifaPorHora;
+        int contador = 0;
+
+        Console.WriteLine("Ingrese la cantidad de empleados:");
+        int cantidadEmpleados = int.Parse(Console.ReadLine());
+
+        while (contador < cantidadEmpleados)
+        {
+            Console.WriteLine($"Empleado {contador + 1}:");
+            Console.Write("Ingrese las horas trabajadas: ");
+            horasTrabajadas = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese la tarifa por hora: ");
+            tarifaPorHora = double.Parse(Console.ReadLine());
+
+            if (horasTrabajadas <= 40)
+            {
+                sueldoBruto = horasTrabajadas * tarifaPorHora * cuotaNormal;
+            }
+            else
+            {
+                sueldoBruto = (40 * tarifaPorHora * cuotaNormal) +
+                              ((horasTrabajadas - 40) * tarifaPorHora * cuotaYMedia);
+            }
+
+            Console.WriteLine($"El sueldo bruto del empleado {contador + 1} es: {sueldoBruto:C}");
+            contador++;
+        }
     }
 }
